@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Servizio Maggior Risparmio - Offerta Luce & Gas</title>
+  <style>
+    :root{
+      --bg: #cfeffd; /* azzurro chiaro */
+      --black: #000000;
+      --red: #c8102e;
+      --yellow-dark: #b8860b; /* giallo scuro */
+      --blue: #0b61a4;
+      --max-width: 960px;
+      --container-pad: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background:var(--bg);
+      color:var(--black);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 16px;
+      font-family:inherit;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background:rgba(255,255,255,0.6);
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      padding:clamp(20px,3.5vw,48px);
+      text-align:center;
+    }
+
+    header h1{
+      margin:0 0 8px 0;
+      font-size:clamp(24px,4vw,42px);
+      color:var(--black);
+      font-weight:700;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    header h2{
+      margin:0 0 22px 0;
+      font-size:clamp(18px,3.5vw,26px);
+      color:var(--red);
+      font-weight:800;
+      letter-spacing:0.6px;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .prices{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      margin:18px 0 28px 0;
+    }
+
+    .price-box{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 20px;
+      border-radius:12px;
+      min-width:220px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      background:rgba(255,255,255,0.9);
+    }
+
+    .price-text{
+      font-size:clamp(20px,4vw,32px);
+      font-weight:800;
+      font-family:Arial, Helvetica, sans-serif;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .price-light{ color: var(--yellow-dark); }
+    .price-gas{ color: var(--blue); }
+
+    /* SVG icon sizing */
+    .icon{
+      width:36px;height:36px;flex:0 0 36px;
+    }
+
+    footer{
+      margin-top:24px;
+      font-size:clamp(14px,2.8vw,18px);
+      color:#111;
+      line-height:1.4;
+    }
+
+    .important{font-weight:700}
+
+    .contacts{margin-top:12px}
+    .contacts a{display:inline-block;margin-right:10px;text-decoration:none;color:inherit}
+
+    /* Responsive tweaks */
+    @media (max-width:520px){
+      .price-box{min-width:unset;width:100%;justify-content:center}
+      .icon{width:28px;height:28px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="main-title">
+    <header>
+      <h1 id="main-title">Servizio Maggior Risparmio</h1>
+      <h2>LA MIGLIORE OFFERTA PER LUCE E GAS!</h2>
+    </header>
+
+    <section class="prices" aria-label="Offerte">
+      <div class="price-box" aria-hidden="false">
+        <!-- Lampadina (inline SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icona lampadina">
+          <path d="M9 21h6v-1a1 1 0 0 0-1-1H10a1 1 0 0 0-1 1v1z" fill="#000" opacity="0.06"/>
+          <path d="M12 2a6 6 0 0 0-4 10.9V15a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.1A6 6 0 0 0 12 2z" fill="var(--yellow-dark)"/>
+        </svg>
+        <div class="price-text price-light">
+          LUCE&nbsp;<span style="font-weight:900">0,125 €/kwh</span>
+        </div>
+      </div>
+
+      <div class="price-box">
+        <!-- Fiammella (inline SVG) -->
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icona fiammella">
+          <path d="M12 2s-4 4-4 8c0 3.3 2.7 6 6 6s6-2.7 6-6c0-4-4-8-8-8z" fill="var(--blue)"/>
+        </svg>
+        <div class="price-text price-gas">
+          GAS&nbsp;<span style="font-weight:900">0,37 €/mc</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="important">Prezzo fisso! Offerta valida per pochi giorni!</p>
+      <p class="important">Per cambi gestore richiesti entro il 22 dicembre 2025, ci saranno bonus da scontare subito in fattura!</p>
+      <p>Consulenza gratuita e senza impegno</p>
+      <p class="important">SIAMO IN VIA PORDENONE 27 AD ALTAMURA</p>
+      <p>Vieni nel nostro ufficio!<br>
+      Se non risiedi ad Altamura contattaci per un appuntamento a casa con un nostro consulente.</p>
+
+      <div class="contacts">
+        <a href="tel:+390802221617" aria-label="Chiama 0802221617">Chiama 0802221617</a>
+        <a href="https://wa.me/393756378151" aria-label="Scrivi su Whatsapp al 3756378151">o scrivi su Whatsapp al 3756378151</a>
+      </div>
+      <div style="margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a href="tel:+390802221617" style="padding:12px 20px; background:#0b61a4; color:white; text-decoration:none; border-radius:8px; font-weight:bold;">Chiama Ora</a>
+    <a href="https://wa.me/393756378151" style="padding:12px 20px; background:#25D366; color:white; text-decoration:none; border-radius:8px; font-weight:bold;">Scrivi su WhatsApp</a>
+  </div>
+</footer>
+  </main>
+</body>
+</html>
